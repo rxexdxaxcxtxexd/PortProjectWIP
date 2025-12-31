@@ -36,6 +36,13 @@ from .components import (
     spinner,
     step_indicator,
     Spinner,
+    # Tables
+    key_value,
+    table,
+    stats_panel,
+    print_key_value,
+    print_table,
+    print_stats_panel,
 )
 
 __all__ = [
@@ -66,4 +73,11 @@ __all__ = [
     "spinner",
     "step_indicator",
     "Spinner",
+    # Tables
+    "key_value",
+    "table",
+    "stats_panel",
+    "print_key_value",
+    "print_table",
+    "print_stats_panel",
 ]

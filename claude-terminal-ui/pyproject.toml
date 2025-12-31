@@ -72,7 +72,8 @@ packages = ["src/claude_terminal_ui"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-v --cov=src/claude_terminal_ui --cov-report=term-missing"
+addopts = "-v -s --cov=src/claude_terminal_ui --cov-report=term-missing"
+# Note: -s disables output capture, required for terminal capability mocking tests
 
 [tool.mypy]
 python_version = "3.9"

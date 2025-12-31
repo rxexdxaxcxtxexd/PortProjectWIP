@@ -82,12 +82,16 @@ class CapabilityDetector:
         if os.environ.get("NO_COLOR"):
             return ColorSupport.NONE
 
-        # FORCE_COLOR override
+        # FORCE_COLOR override (standard levels: 1=basic, 2=256, 3=truecolor, true=truecolor)
         force_color = os.environ.get("FORCE_COLOR", "")
         if force_color:
-            if force_color in ("3", "true", "1"):
+            if force_color in ("3", "true"):
                 return ColorSupport.TRUECOLOR
-            return ColorSupport.BASIC
+            elif force_color == "2":
+                return ColorSupport.EXTENDED
+            elif force_color == "1":
+                return ColorSupport.BASIC
+            return ColorSupport.BASIC  # Any other truthy value = basic
 
         # Windows Terminal detection (excellent support)
         if os.environ.get("WT_SESSION"):
