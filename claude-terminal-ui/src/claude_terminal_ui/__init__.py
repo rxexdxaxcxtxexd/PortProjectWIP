@@ -43,6 +43,17 @@ from .components import (
     print_key_value,
     print_table,
     print_stats_panel,
+    # Trees
+    tree,
+    nested_list,
+    simple_tree,
+    TreeNode,
+    # Panels
+    panel,
+    box,
+    info_panel,
+    titled_box,
+    compact_panel,
 )
 
 __all__ = [
@@ -80,4 +91,15 @@ __all__ = [
     "print_key_value",
     "print_table",
     "print_stats_panel",
+    # Trees
+    "tree",
+    "nested_list",
+    "simple_tree",
+    "TreeNode",
+    # Panels
+    "panel",
+    "box",
+    "info_panel",
+    "titled_box",
+    "compact_panel",
 ]
